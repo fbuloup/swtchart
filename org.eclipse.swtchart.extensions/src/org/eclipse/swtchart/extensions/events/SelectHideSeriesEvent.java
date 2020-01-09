@@ -47,7 +47,7 @@ public class SelectHideSeriesEvent extends AbstractHandledEventProcessor impleme
 			 * Hide
 			 */
 			String selectedSeriesId = baseChart.getSelectedseriesId(event);
-			if(selectedSeriesId.equals("")) {
+			if(selectedSeriesId.equals("")) { //$NON-NLS-1$
 				baseChart.resetSeriesSettings();
 			} else {
 				baseChart.hideSeries(selectedSeriesId);
@@ -58,7 +58,7 @@ public class SelectHideSeriesEvent extends AbstractHandledEventProcessor impleme
 			 * Select
 			 */
 			String selectedSeriesId = baseChart.getSelectedseriesId(event);
-			if(selectedSeriesId.equals("")) {
+			if(selectedSeriesId.equals("")) { //$NON-NLS-1$
 				baseChart.resetSeriesSettings();
 			} else {
 				baseChart.selectSeries(selectedSeriesId);

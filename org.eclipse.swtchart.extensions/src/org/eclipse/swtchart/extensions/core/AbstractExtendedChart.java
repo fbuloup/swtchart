@@ -26,6 +26,7 @@ import org.eclipse.swtchart.ISeries;
 import org.eclipse.swtchart.ISeries.SeriesType;
 import org.eclipse.swtchart.ISeriesSet;
 import org.eclipse.swtchart.Range;
+import org.eclipse.swtchart.extensions.SWTChartExtensionsMessages;
 import org.eclipse.swtchart.extensions.barcharts.IBarSeriesSettings;
 import org.eclipse.swtchart.extensions.core.RangeRestriction.ExtendType;
 import org.eclipse.swtchart.extensions.exceptions.SeriesException;
@@ -300,7 +301,7 @@ public abstract class AbstractExtendedChart extends AbstractHandledChart impleme
 			calculateCoordinates(series);
 			return series;
 		} else {
-			throw new SeriesException("The length of x and y series differs.");
+			throw new SeriesException(SWTChartExtensionsMessages.get(SWTChartExtensionsMessages.LENGTH_OF_X_AND_Y_SERIES_DIFFERS_KEY));
 		}
 	}
 
@@ -415,9 +416,9 @@ public abstract class AbstractExtendedChart extends AbstractHandledChart impleme
 					if(end > start) {
 						Range adjustedRange = new Range(start, end);
 						axis.setRange(adjustedRange);
-					} else {
+					}/* else {
 						System.out.println("Can't set secondary x axes range: " + start + "\t" + end);
-					}
+					}*/
 				}
 			}
 		}

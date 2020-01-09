@@ -21,12 +21,13 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.swtchart.Constants;
 import org.eclipse.swtchart.IAxis.Position;
 import org.eclipse.swtchart.LineStyle;
+import org.eclipse.swtchart.extensions.SWTChartExtensionsMessages;
 
 public abstract class AbstractAxisSettings implements IAxisSettings {
 
-	private String title = ""; // Chart Title
+	private String title = ""; // Chart Title //$NON-NLS-1$
 	private boolean titleVisible;
-	private String description = ""; // e.g. DropDown RangeSelector
+	private String description = ""; // e.g. DropDown RangeSelector //$NON-NLS-1$
 	private DecimalFormat decimalFormat;
 	private Color color;
 	private Font titleFont;
@@ -40,7 +41,7 @@ public abstract class AbstractAxisSettings implements IAxisSettings {
 	/*
 	 * The default font is only used if no font is set.
 	 */
-	private final Font defaultFont = new Font(Display.getDefault(), "Tahoma", Constants.MEDIUM_FONT_SIZE, SWT.BOLD);
+	private final Font defaultFont = new Font(Display.getDefault(), "Tahoma", Constants.MEDIUM_FONT_SIZE, SWT.BOLD); //$NON-NLS-1$
 
 	public AbstractAxisSettings(String title) {
 		/*
@@ -69,15 +70,15 @@ public abstract class AbstractAxisSettings implements IAxisSettings {
 	@Override
 	public String getLabel() {
 
-		String label = "";
-		if(title.equals("")) {
+		String label = ""; //$NON-NLS-1$
+		if(title.equals("")) { //$NON-NLS-1$
 			/*
 			 * Title is not set.
 			 * Use the description instead or
 			 * print a note that no label is available.
 			 */
-			if(description.equals("")) {
-				label = "label not set";
+			if(description.equals("")) { //$NON-NLS-1$
+				label = SWTChartExtensionsMessages.get(SWTChartExtensionsMessages.LABEL_NOT_SET_KEY);
 			} else {
 				label = description;
 			}
@@ -87,7 +88,7 @@ public abstract class AbstractAxisSettings implements IAxisSettings {
 			 * Use description if available
 			 * otherwise the title.
 			 */
-			if(description.equals("")) {
+			if(description.equals("")) { //$NON-NLS-1$
 				label = title;
 			} else {
 				label = description;

@@ -50,6 +50,6 @@ public abstract class AbstractChartMenuEntry implements IChartMenuEntry {
 	@Override
 	public String toString() {
 
-		return "ChartMenuEntry [category=" + getCategory() + ", name=" + getName() + "]";
+		return "ChartMenuEntry [category=" + getCategory() + ", name=" + getName() + "]"; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 	}
 }

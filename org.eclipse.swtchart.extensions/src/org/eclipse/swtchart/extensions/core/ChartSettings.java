@@ -23,6 +23,7 @@ import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swtchart.Constants;
+import org.eclipse.swtchart.extensions.SWTChartExtensionsMessages;
 import org.eclipse.swtchart.extensions.events.IHandledEventProcessor;
 import org.eclipse.swtchart.extensions.events.MouseDownEvent;
 import org.eclipse.swtchart.extensions.events.MouseMoveCursorEvent;
@@ -99,7 +100,7 @@ public class ChartSettings implements IChartSettings {
 	/*
 	 * The default font is only used if no font is set.
 	 */
-	private final Font defaultFont = new Font(Display.getDefault(), "Tahoma", Constants.MEDIUM_FONT_SIZE, SWT.BOLD);
+	private final Font defaultFont = new Font(Display.getDefault(), "Tahoma", Constants.MEDIUM_FONT_SIZE, SWT.BOLD); //$NON-NLS-1$
 
 	public ChartSettings() {
 		//
@@ -120,7 +121,7 @@ public class ChartSettings implements IChartSettings {
 		 * To display a space on top of the chart, a default
 		 * title is set and WHITE is used to hide it.
 		 */
-		title = "Chart Title";
+		title = SWTChartExtensionsMessages.get(SWTChartExtensionsMessages.CHART_TITLE_KEY);
 		titleVisible = true;
 		titleColor = display.getSystemColor(SWT.COLOR_WHITE);
 		titleFont = defaultFont;
@@ -270,7 +271,7 @@ public class ChartSettings implements IChartSettings {
 		 */
 		// this.verticalSliderVisible = verticalSliderVisible;
 		this.verticalSliderVisible = false;
-		System.out.println("Can't set vertical slider true, see: https://bugs.eclipse.org/bugs/show_bug.cgi?id=511257");
+		System.out.println("Can't set vertical slider true, see: https://bugs.eclipse.org/bugs/show_bug.cgi?id=511257"); //$NON-NLS-1$
 	}
 
 	@Override
@@ -297,7 +298,7 @@ public class ChartSettings implements IChartSettings {
 		if(title != null) {
 			this.title = title;
 		} else {
-			this.title = "";
+			this.title = ""; //$NON-NLS-1$
 		}
 	}
 

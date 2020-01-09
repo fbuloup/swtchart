@@ -9,15 +9,15 @@
  * 
  * Contributors:
  * Dr. Philip Wenig - initial API and implementation
+ * Frank Buloup - Internationalization
  *******************************************************************************/
 package org.eclipse.swtchart.extensions.menu;
 
 import org.eclipse.swt.widgets.Shell;
+import org.eclipse.swtchart.extensions.SWTChartExtensionsMessages;
 import org.eclipse.swtchart.extensions.core.ScrollableChart;
 
 public class UndoSelectionHandler extends AbstractChartMenuEntry implements IChartMenuEntry {
-
-	public static final String NAME = "Undo Selection";
 
 	@Override
 	public String getCategory() {
@@ -28,7 +28,7 @@ public class UndoSelectionHandler extends AbstractChartMenuEntry implements ICha
 	@Override
 	public String getName() {
 
-		return NAME;
+		return SWTChartExtensionsMessages.get(SWTChartExtensionsMessages.UNDO_SELECTION_KEY);
 	}
 
 	@Override

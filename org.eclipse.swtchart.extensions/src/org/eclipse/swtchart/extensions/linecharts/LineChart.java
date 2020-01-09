@@ -26,12 +26,12 @@ public class LineChart extends ScrollableChart {
 
 	private static final int DISPLAY_WIDTH = Display.getDefault().getClientArea().width;
 	//
-	public static final String COMPRESSION_EXTREME = "Extreme";
-	public static final String COMPRESSION_HIGH = "High";
-	public static final String COMPRESSION_MEDIUM = "Medium";
-	public static final String COMPRESSION_LOW = "Low";
-	public static final String COMPRESSION_NONE = "None";
-	public static final String COMPRESSION_AUTO = "Auto";
+	public static final String COMPRESSION_EXTREME = "Extreme"; //$NON-NLS-1$
+	public static final String COMPRESSION_HIGH = "High"; //$NON-NLS-1$
+	public static final String COMPRESSION_MEDIUM = "Medium"; //$NON-NLS-1$
+	public static final String COMPRESSION_LOW = "Low"; //$NON-NLS-1$
+	public static final String COMPRESSION_NONE = "None"; //$NON-NLS-1$
+	public static final String COMPRESSION_AUTO = "Auto"; //$NON-NLS-1$
 	/*
 	 * The compression number is dependent on the display width.
 	 */

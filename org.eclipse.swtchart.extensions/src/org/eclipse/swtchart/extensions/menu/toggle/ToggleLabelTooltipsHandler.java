@@ -9,18 +9,18 @@
  * 
  * Contributors:
  * Dr. Philip Wenig - initial API and implementation
+ * Frank Buloup - Internationalization
  *******************************************************************************/
 package org.eclipse.swtchart.extensions.menu.toggle;
 
 import org.eclipse.swt.widgets.Shell;
+import org.eclipse.swtchart.extensions.SWTChartExtensionsMessages;
 import org.eclipse.swtchart.extensions.core.ScrollableChart;
 import org.eclipse.swtchart.extensions.menu.AbstractChartMenuEntry;
 import org.eclipse.swtchart.extensions.menu.IChartMenuCategories;
 import org.eclipse.swtchart.extensions.menu.IChartMenuEntry;
 
 public class ToggleLabelTooltipsHandler extends AbstractChartMenuEntry implements IChartMenuEntry {
-
-	public static final String NAME = "Show Tooltips";
 
 	@Override
 	public String getCategory() {
@@ -31,7 +31,7 @@ public class ToggleLabelTooltipsHandler extends AbstractChartMenuEntry implement
 	@Override
 	public String getName() {
 
-		return NAME;
+		return SWTChartExtensionsMessages.get(SWTChartExtensionsMessages.SHOW_TOOLTIPS_KEY);
 	}
 
 	@Override

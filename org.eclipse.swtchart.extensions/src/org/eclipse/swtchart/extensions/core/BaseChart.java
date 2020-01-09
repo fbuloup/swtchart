@@ -9,6 +9,7 @@
  * 
  * Contributors:
  * Dr. Philip Wenig - initial API and implementation
+ * Frank Buloup - Internationalization
  *******************************************************************************/
 package org.eclipse.swtchart.extensions.core;
 
@@ -40,6 +41,7 @@ import org.eclipse.swtchart.ISeries;
 import org.eclipse.swtchart.ITitle;
 import org.eclipse.swtchart.LineStyle;
 import org.eclipse.swtchart.Range;
+import org.eclipse.swtchart.extensions.SWTChartExtensionsMessages;
 import org.eclipse.swtchart.extensions.barcharts.IBarSeriesSettings;
 import org.eclipse.swtchart.extensions.events.IEventProcessor;
 import org.eclipse.swtchart.extensions.events.IHandledEventProcessor;
@@ -51,10 +53,10 @@ public class BaseChart extends AbstractExtendedChart implements IChartDataCoordi
 
 	public static final int ID_PRIMARY_X_AXIS = 0;
 	public static final int ID_PRIMARY_Y_AXIS = 0;
-	public static final String DEFAULT_TITLE_X_AXIS = "X-Axis";
-	public static final String DEFAULT_TITLE_Y_AXIS = "Y-Axis";
+	public static final String DEFAULT_TITLE_X_AXIS = SWTChartExtensionsMessages.get(SWTChartExtensionsMessages.X_AXIS_KEY);
+	public static final String DEFAULT_TITLE_Y_AXIS = SWTChartExtensionsMessages.get(SWTChartExtensionsMessages.Y_AXIS_KEY);
 	//
-	public static final String SELECTED_SERIES_NONE = "None";
+	public static final String SELECTED_SERIES_NONE = SWTChartExtensionsMessages.get(SWTChartExtensionsMessages.NONE_KEY);
 	/*
 	 * see: IHandledEventProcessor
 	 * Map<Integer, Map<Integer, Map<Integer, List<IEventProcessor>>>>
@@ -908,7 +910,7 @@ public class BaseChart extends AbstractExtendedChart implements IChartDataCoordi
 			if(axisSettings != null) {
 				label = axisSettings.getLabel();
 			} else {
-				label = "not set";
+				label = SWTChartExtensionsMessages.get(SWTChartExtensionsMessages.NOT_SET_KEY);
 			}
 			items[i] = label;
 		}
@@ -1071,7 +1073,7 @@ public class BaseChart extends AbstractExtendedChart implements IChartDataCoordi
 	public String getSelectedseriesId(Event event) {
 
 		ISeries[] series = getSeriesSet().getSeries();
-		String selectedSeriesId = "";
+		String selectedSeriesId = ""; //$NON-NLS-1$
 		/*
 		 * Get the selected series id.
 		 */
